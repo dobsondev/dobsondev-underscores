@@ -24,7 +24,7 @@
 	<div id="masthead-wrapper">
 		<header id="masthead" class="site-header row" role="banner">
 			<div class="site-branding small-12 large-6 columns">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation small-12 large-6 columns" role="navigation">
