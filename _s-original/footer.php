@@ -32,6 +32,8 @@
     <div class="row" id="bottom-bar-row">
       <div class="site-info">
         &copy; Copyright <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> All Rights Reserved &nbsp;|&nbsp; Website Design &amp; Development by <a href="http://dobsondev.com/" title="DobsonDev | Web Development" target="_blank">DobsonDev</a>
+        <br />
+        Proudly Powered by <a href="http://wordpress.org/" title="WordPress" target="_blank">WordPress</a>
       </div><!-- .site-info -->
     </div><!-- #bottom-bar-row -->
   </div><!-- #bottom-bar -->
