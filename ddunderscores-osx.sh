@@ -31,12 +31,12 @@ sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/inc/wpcom.php 2>/dev/null
 ## layouts folder files
 sed -i '' s/_SsS/"${THEMENAME}"/g $BASEDIR/$THEMEFOLDER/layouts/content-sidebar.css 2>/dev/null
 sed -i '' s/_SsS/"${THEMENAME}"/g $BASEDIR/$THEMEFOLDER/layouts/sidebar-content.css 2>/dev/null
-## templates-parts folder files
-sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/templates-parts/content-none.php 2>/dev/null
-sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/templates-parts/content-page.php 2>/dev/null
-sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/templates-parts/content-search.php 2>/dev/null
-sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/templates-parts/content-single.php 2>/dev/null
-sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/templates-parts/content.php 2>/dev/null
+## template-parts folder files
+sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/template-parts/content-none.php 2>/dev/null
+sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/template-parts/content-page.php 2>/dev/null
+sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/template-parts/content-search.php 2>/dev/null
+sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/template-parts/content-single.php 2>/dev/null
+sed -i '' s/_sSs/"$THEMESLUG"/g $BASEDIR/$THEMEFOLDER/template-parts/content.php 2>/dev/null
 ## templates folder file
 sed -i '' s/_SsS/"${THEMENAME}"/g $BASEDIR/$THEMEFOLDER/templates/template-home-page.php 2>/dev/null
 ## base directory files
