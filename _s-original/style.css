@@ -1,9 +1,9 @@
 /*
 Theme Name: _SsS
-Theme URI: http://dobsondev.com/portfolio/dobsondev-underscores
+Theme URI: http://underscores.dobsondev.com/
 Author: Alex Dobson
 Author URI: http://dobsondev.com/
-Description: SUP?! I'm a theme called <code>_SsS</code> based on <em>underscores</em>. I was created using the DobsonDev Underscores Theme generator script (http://dobsondev.com/), which creates a theme using Underscores (http://underscores.me/) as a starting base. The base Underscores theme has been modified to include Foundation for repsonsive design and a number of other tweaks to things such as the menu CSS to have a better starting off point. I hope you enjoy your theme!
+Description: SUP?! I'm a theme called <code>_SsS</code> based on <em>underscores</em>. I was created using the DobsonDev Underscores Theme generator script (http://underscores.dobsondev.com/), which creates a theme using Underscores (http://underscores.me/) as a starting base with Foundation included as a great front-end framework. I find this combination extremely powerful and easy to work with. I hope you enjoy your theme!
 Version: 1.0.0
 License: The MIT License (MIT)
 License URI: http://opensource.org/licenses/MIT
@@ -1003,3 +1003,7 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+# _SsS
+--------------------------------------------------------------*/
