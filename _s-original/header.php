@@ -34,5 +34,4 @@
 		</header><!-- #masthead -->
 	</div><!-- #masthead-wrapper -->
 
-	<div id="content-wrapper" class="row">
-		<div id="content" class="site-content">
+	<div id="content">
