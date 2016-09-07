@@ -14,7 +14,15 @@ Be sure to change the path to where ever it is that you’re keeping the project
 
 ## How to Use
 
-Ideally you will want to add either the OS X or Apache (depending on your system) shell script to your PATH. This will enable you to call the script from anywhere. While you can do this however you want - I like to just use an alias so I can edit the `_s-original` theme if I need to (as mentioned in the installation section above). Once you have the script setup and added into your PATH simply call it and answer the questions the script provides. Once you run the script it will ask you for:
+### DobsonDev Underscores Generator
+
+The DobsonDev Underscores Generator is extremely easy to use. All you have to do is fill out the form on the generator page at [underscores.dobsondev.com](http://underscores.dobsondev.com/). Once you do that you'll be given a download containg a zip of your new starter theme.
+
+This theme is extremely bare bones, but it's meant to be that way. The idea is that it provides an amazing starting place that you can then easily expand to suit your or your client needs. I use this theme when creating new websites for my clients because I would rather not write a theme from scratch every single time.
+
+### Shell Scripts
+
+If you are using the scripts you will want to add either the OS X or Apache (depending on your system) shell script to your PATH. This will enable you to call the script from anywhere. While you can do this however you want - I like to just use an alias so I can edit the `_s-original` theme if I need to (as mentioned in the installation section above). Once you have the script setup and added into your PATH simply call it and answer the questions the script provides. Once you run the script it will ask you for:
 
 1. name of the theme
 2. theme folder name
