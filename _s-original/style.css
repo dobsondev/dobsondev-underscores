@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 
+# Foundation Changes
 # Reusable Styles
 # Menus
 # Accessibility
@@ -38,6 +39,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Foundation Changes
+--------------------------------------------------------------*/
+
+ol, ul {
+  margin-left: 2em;
+}
 
 /*--------------------------------------------------------------
 ## Reusable Styles
