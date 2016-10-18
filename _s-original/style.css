@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 
+# Reusable Styles
 # Menus
 # Accessibility
 # Alignments
@@ -39,48 +40,86 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+## Reusable Styles
+--------------------------------------------------------------*/
+
+ul.twoCol {
+  -moz-column-count: 2;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 1em;
+  column-count: 2;
+  column-gap: 1em;
+}
+
+ul.threeCol {
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
+}
+
+/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.site-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+nav#top-header-nav ul,
+nav#top-header-nav ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.site-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+nav#top-header-nav ul li {
+  position: relative;
+  background: #FFF;
 }
 
-.site-navigation li {
-	float: left;
-	position: relative;
+nav#top-header-nav ul a {
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
 }
 
-.site-navigation a {
-	display: block;
-	text-decoration: none;
+/* Level 1 Drop Down Menu */
+nav#top-header-nav ul > li {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -4px; /* solve the 4 pixels spacing between list-items */
 }
 
-.site-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
+nav#top-header-nav ul > li:first-child {
+  margin-left: 0;
 }
 
-.site-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+/* Level 2 Drop Down Menu */
+nav#top-header-nav ul > li > ul {
+  text-align: left;
+  width: 200px; /* change auto value with 200px if you want a bigger menu */
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999999;
 }
 
-.site-navigation ul ul a {
-	width: 200px;
+nav#top-header-nav ul > li:hover > ul {
+  display: block;
+}
+
+/* Level 3 Drop Down Menu */
+nav#top-header-nav ul > li > ul > li > ul {
+  text-align: left;
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 9999999;
+}
+
+nav#top-header-nav ul > li > ul > li:hover > ul {
+  display: block;
 }
 
 /* Small menu. */
@@ -92,24 +131,24 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /* Mobile Menu */
 @media screen and (max-width: 37.5em) {
 	button.menu-toggle,
-	nav.site-navigation.toggled .nav-menu {
+	nav#top-header-nav.toggled .nav-menu {
 		display: block;
 		margin: 15px auto;
 		font-size: 20px;
 	}
 
-	nav.site-navigation {
+	nav#top-header-nav {
 		float: none;
 		width: 100%;
 		text-align: center;
 		padding: 5px 0;
 	}
 
-	nav.site-navigation ul {
+	nav#top-header-nav ul {
 		display: none;
 	}
 
-	nav.site-navigation ul {
+	nav#top-header-nav ul {
 		float: none;
 		position: absolute;
 		width: 100%;
@@ -117,14 +156,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		z-index: 99;
 	}
 
-	nav.site-navigation ul li {
+	nav#top-header-nav ul li {
 		position: relative;
 		float: none;
 		display: block;
 		padding: 0;
 	}
 
-	nav.site-navigation ul ul {
+	/* Level 2 Drop Down Menu */
+	nav#top-header-nav ul > li > ul {
 		position: relative;
 		float: none;
 		display: block;
@@ -139,16 +179,31 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		box-shadow: none;
 	}
 
-	nav.site-navigation ul ul li {
-		width: 100%;
+	nav#top-header-nav ul > li > ul li {
+		text-align: center;
+	}
+
+	/* Level 3 Drop Down Menu */
+	nav#top-header-nav ul > li > ul > li > ul {
 		position: relative;
 		float: none;
 		display: block;
-		border: none;
+		width: 100%;
+		z-index: 999;
+		left: 0;
+		top: 0;
+		margin: 0;
 		padding: 0;
+		border: none;
+		background: none;
+		box-shadow: none;
 	}
 
-	nav.site-navigation ul ul li a {
+	nav#top-header-nav ul > li > ul > li > ul li {
+		text-align: center;
+	}
+
+	nav#top-header-nav ul ul li a {
 		float: none;
 		width: 100%;
 		line-height: normal;
@@ -157,13 +212,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		text-transform: none;
 	}
 
-	nav.site-navigation ul li:hover > ul,
-	nav.site-navigation ul li.focus > ul {
+	nav#top-header-nav ul li:hover > ul,
+	nav#top-header-nav ul li.focus > ul {
 		left: auto;
 	}
 
-	nav.site-navigation ul ul li:hover > ul,
-	nav.site-navigation ul ul li.focus > ul {
+	nav#top-header-nav ul ul li:hover > ul,
+	nav#top-header-nav ul ul li.focus > ul {
 		left: auto;
 	}
 } /* End Mobile Menu */
