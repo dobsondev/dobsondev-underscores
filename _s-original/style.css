@@ -70,6 +70,91 @@ ul.threeCol {
   column-gap: 1em;
 }
 
+h1.centered
+h2.centered
+h3.centered
+h4.centered
+h5.centered
+h6.centered
+p.centered,
+ul.centered li {
+  text-align: center;
+}
+
+div.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.centered {
+  list-style-type: none;
+}
+
+i.fa-facebook-square,
+i.fa-facebook-official,
+i.fa-facebook-f,
+i.fa-facebook {
+  color: #3B5998;
+}
+
+i.fa-twitter-square,
+i.fa-twitter {
+  color: #55ACEE;
+}
+
+i.fa-instagram {
+  color: #BC2A8D;
+}
+
+i.fa-linkedin-square,
+i.fa-linkedin {
+  color: #0077B5;
+}
+
+i.fa-google-plus-square,
+i.fa-google-plus {
+  color: #D34836;
+}
+
+div.div-line {
+  width: 50%;
+  max-width: 200px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  border-top: 1px solid #09F;
+}
+
+div.div-line.white {
+  border-top: 1px solid #FFF;
+}
+
+div.div-line.black {
+  border-top: 1px solid #000;
+}
+
+a.btn {
+  font-size: 1.15em;
+  line-height: 1.05em;
+  font-weight: bold;
+  text-align: center;
+  color: #FFF;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  -webkit-transition: background .3s ease 0s;
+  transition: background .3s ease 0s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  padding: 15px 22px 13px;
+  border-bottom: 3px solid #005288;
+  background: #09F;
+}
+
+a.btn:hover {
+  background: #006DB3;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -535,3 +620,16 @@ object {
 /*--------------------------------------------------------------
 # _SsS
 --------------------------------------------------------------*/
+
+div.div-line.blue {
+  border-top: 1px solid #09F;
+}
+
+a.btn.blue {
+  border-bottom: 3px solid #005288;
+  background: #09F;
+}
+
+a.btn.blue:hover {
+  background: #006DB3;
+}
