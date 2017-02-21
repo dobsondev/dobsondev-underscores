@@ -116,6 +116,17 @@ i.fa-google-plus {
   color: #D34836;
 }
 
+i.fa-youtube-square,
+i.fa-youtube-play,
+i.fa-youtube {
+  color: #E52D27;
+}
+
+i.fa-rss-square,
+i.fa-rss {
+  color: #FF6600;
+}
+
 div.div-line {
   width: 50%;
   max-width: 200px;
