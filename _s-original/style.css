@@ -13,7 +13,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-_SsS is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+_SsS is based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -68,26 +68,6 @@ ul.threeCol {
   -webkit-column-gap: 1em;
   column-count: 3;
   column-gap: 1em;
-}
-
-h1.centered,
-h2.centered,
-h3.centered,
-h4.centered,
-h5.centered,
-h6.centered,
-p.centered,
-ul.centered li {
-  text-align: center;
-}
-
-div.centered {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-ul.centered {
-  list-style-type: none;
 }
 
 i.fa-facebook-square,
