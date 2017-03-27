@@ -128,7 +128,28 @@ get_header(); ?>
                 </dd>
               </dl>
 
+              <h2>Libraries</h2>
+              <hr />
+
+              <h4>Font Awesome</h4>
+              <h6><a href="http://fontawesome.io/" title="Font Awesome">http://fontawesome.io/</a></h6>
+              <p>
+                <i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook<br />
+                <i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter<br />
+                <i class="fa fa-instagram" aria-hidden="true"></i> Instagram<br />
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn<br />
+                <i class="fa fa-google-plus-square" aria-hidden="true"></i> Google Plus<br />
+                <i class="fa fa-youtube-square" aria-hidden="true"></i> YouTube
+              </p>
+
+              <h4>JQuery Mask</h4>
+              <h6><a href="https://igorescobar.github.io/jQuery-Mask-Plugin/" title="jQuery Mask Plugin">https://igorescobar.github.io/jQuery-Mask-Plugin/</a></h6>
+              <p>
+                <input type="text" name="phone" data-mask="(000) 000 0000" />
+              </p>
+
               <h2>Foundation Specific Stuff</h2>
+              <hr />
 
               <h6><a href="http://foundation.zurb.com/sites/docs/kitchen-sink.html" title="Foundation Kitchen Sink" target="_blank">Click Here to See More Examples and Code for the Examples</a></h6>
 
