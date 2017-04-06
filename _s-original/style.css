@@ -23,25 +23,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 
-# Foundation Changes
-# Reusable Styles
-# Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-  ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+1.0 Foundation Changes
+2.0 Reusable Styles
+3.0 Menus
+4.0 Accessibility
+5.0 Alignments
+6.0 Clearings
+7.0 Widgets
+8.0 Content
+  8.1 Posts and pages
+  8.2 Asides
+  8.3 Comments
+9.0 Infinite scroll
+10.0 Media
+  10.1 Captions
+  10.2 Galleries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## Foundation Changes
+1.0 Foundation Changes
 --------------------------------------------------------------*/
 
 ol, ul {
@@ -49,7 +49,7 @@ ol, ul {
 }
 
 /*--------------------------------------------------------------
-## Reusable Styles
+2.0 Reusable Styles
 --------------------------------------------------------------*/
 
 ul.twoCol {
@@ -115,6 +115,15 @@ div.div-line {
   border-top: 1px solid #09F;
 }
 
+div.div-line.extended {
+  width: 75%;
+  max-width: 100%;
+}
+
+div.div-line.centered {
+  margin: 13px auto;
+}
+
 div.div-line.white {
   border-top: 1px solid #FFF;
 }
@@ -147,7 +156,7 @@ a.btn:hover {
 }
 
 /*--------------------------------------------------------------
-## Menus
+3.0 Menus
 --------------------------------------------------------------*/
 nav#top-header-nav ul,
 nav#top-header-nav ul ul {
@@ -158,7 +167,6 @@ nav#top-header-nav ul ul {
 
 nav#top-header-nav ul li {
   position: relative;
-  background: #FFF;
 }
 
 nav#top-header-nav ul a {
@@ -171,22 +179,21 @@ nav#top-header-nav ul a {
 nav#top-header-nav ul > li {
   display: inline-block;
   vertical-align: top;
-  margin-left: -4px; /* solve the 4 pixels spacing between list-items */
-}
-
-nav#top-header-nav ul > li:first-child {
-  margin-left: 0;
 }
 
 /* Level 2 Drop Down Menu */
 nav#top-header-nav ul > li > ul {
   text-align: left;
-  width: 200px; /* change auto value with 200px if you want a bigger menu */
+  width: 175px; /* change value if you want a bigger/smaller menu */
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 9999999;
+}
+
+nav#top-header-nav ul > li > ul > li {
+  width: 175px; /* change value if you want a bigger/smaller menu */
 }
 
 nav#top-header-nav ul > li:hover > ul {
@@ -210,199 +217,205 @@ nav#top-header-nav ul > li > ul > li:hover > ul {
 /* Small menu. */
 .menu-toggle,
 .site-navigation.toggled ul {
-	display: block;
+  display: block;
 }
 
 /* Mobile Menu */
 @media screen and (max-width: 37.5em) {
-	button.menu-toggle,
-	nav#top-header-nav.toggled .nav-menu {
-		display: block;
-		margin: 15px auto;
-		font-size: 20px;
-	}
+  button.menu-toggle,
+  nav#top-header-nav.toggled .nav-menu {
+    display: block;
+    margin: 15px auto;
+    font-size: 20px;
+  }
 
-	nav#top-header-nav {
-		float: none;
-		width: 100%;
-		text-align: center;
-		padding: 5px 0;
-	}
+  button.menu-toggle {
+    border: 5px solid #000;
+    border-radius: 15px;
+    padding: 15px;
+  }
 
-	nav#top-header-nav ul {
-		display: none;
-	}
+  nav#top-header-nav {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+  }
 
-	nav#top-header-nav ul {
-		float: none;
-		position: absolute;
-		width: 100%;
-		margin: 0;
-		z-index: 99;
-	}
+  nav#top-header-nav ul {
+    display: none;
+  }
 
-	nav#top-header-nav ul li {
-		position: relative;
-		float: none;
-		display: block;
-		padding: 0;
-	}
+  nav#top-header-nav ul {
+    float: none;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    z-index: 99;
+  }
 
-	/* Level 2 Drop Down Menu */
-	nav#top-header-nav ul > li > ul {
-		position: relative;
-		float: none;
-		display: block;
-		width: 100%;
-		z-index: 999;
-		left: 0;
-		top: 0;
-		margin: 0;
-		padding: 0;
-		border: none;
-		background: none;
-		box-shadow: none;
-	}
+  nav#top-header-nav ul li {
+    position: relative;
+    float: none;
+    display: block;
+    padding: 0;
+  }
 
-	nav#top-header-nav ul > li > ul li {
-		text-align: center;
-	}
+  /* Level 2 Drop Down Menu */
+  nav#top-header-nav ul > li > ul {
+    position: relative;
+    float: none;
+    display: block;
+    width: 100%;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
 
-	/* Level 3 Drop Down Menu */
-	nav#top-header-nav ul > li > ul > li > ul {
-		position: relative;
-		float: none;
-		display: block;
-		width: 100%;
-		z-index: 999;
-		left: 0;
-		top: 0;
-		margin: 0;
-		padding: 0;
-		border: none;
-		background: none;
-		box-shadow: none;
-	}
+  nav#top-header-nav ul > li > ul li {
+    text-align: center;
+  }
 
-	nav#top-header-nav ul > li > ul > li > ul li {
-		text-align: center;
-	}
+  /* Level 3 Drop Down Menu */
+  nav#top-header-nav ul > li > ul > li > ul {
+    position: relative;
+    float: none;
+    display: block;
+    width: 100%;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
 
-	nav#top-header-nav ul ul li a {
-		float: none;
-		width: 100%;
-		line-height: normal;
-		font-variant: normal;
-		font-weight: normal;
-		text-transform: none;
-	}
+  nav#top-header-nav ul > li > ul > li > ul li {
+    text-align: center;
+  }
 
-	nav#top-header-nav ul li:hover > ul,
-	nav#top-header-nav ul li.focus > ul {
-		left: auto;
-	}
+  nav#top-header-nav ul ul li a {
+    float: none;
+    width: 100%;
+    line-height: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-transform: none;
+  }
 
-	nav#top-header-nav ul ul li:hover > ul,
-	nav#top-header-nav ul ul li.focus > ul {
-		left: auto;
-	}
+  nav#top-header-nav ul li:hover > ul,
+  nav#top-header-nav ul li.focus > ul {
+    left: auto;
+  }
+
+  nav#top-header-nav ul ul li:hover > ul,
+  nav#top-header-nav ul ul li.focus > ul {
+    left: auto;
+  }
 } /* End Mobile Menu */
 
 /*
-	Full Screen Menu Toggle CSS
-	===> DO NOT TOUCH PREFERABLY BUT YOU MAY NEED TO CHANGE THE 'min-width' VALUE <===
+  Full Screen Menu Toggle CSS
+  ===> DO NOT TOUCH PREFERABLY BUT YOU MAY NEED TO CHANGE THE 'min-width' VALUE <===
 */
 @media screen and (min-width: 40em) {
-	.menu-toggle {
-		display: none;
-	}
-	.site-navigation ul {
-		display: block;
-		left: 0;
-	}
+  .menu-toggle {
+    display: none;
+  }
+  .site-navigation ul {
+    display: block;
+    left: 0;
+  }
 }
 
 /* Navigation Arrows */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+  margin: 0 0 1.5em;
+  overflow: hidden;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+  float: left;
+  width: 50%;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+  float: right;
+  text-align: right;
+  width: 50%;
 }
 
 /*--------------------------------------------------------------
-# Accessibility
+4.0 Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
 }
 
 /*--------------------------------------------------------------
-# Alignments
+5.0 Alignments
 --------------------------------------------------------------*/
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------------------------
-# Clearings
+6.0 Clearings
 --------------------------------------------------------------*/
 .clear:before,
 .clear:after,
@@ -416,8 +429,8 @@ nav#top-header-nav ul > li > ul > li:hover > ul {
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-	content: "";
-	display: table;
+  content: "";
+  display: table;
 }
 
 .clear:after,
@@ -426,194 +439,233 @@ nav#top-header-nav ul > li > ul > li:hover > ul {
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+  clear: both;
 }
 
 /*--------------------------------------------------------------
-# Widgets
+7.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets. */
 .widget select {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* Search widget. */
 .widget_search .search-submit {
-	display: none;
+  display: none;
 }
 
 h1.widget-title {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 /*--------------------------------------------------------------
-# Content
+8.0 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Posts and pages
+8.1 Posts and pages
 --------------------------------------------------------------*/
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 .byline,
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------
-## Asides
+8.2 Asides
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+  display: none;
 }
 
 /*--------------------------------------------------------------
-## Comments
+8.3 Comments
 --------------------------------------------------------------*/
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .bypostauthor {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
-# Infinite scroll
+9.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
+  display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
-# Media
+10.0 Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------
-## Captions
+10.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+  margin-bottom: 1.5em;
+  max-width: 100%;
 }
 
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .wp-caption-text {
-	text-align: center;
+  text-align: center;
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+  margin: 0.8075em 0;
 }
 
 /*--------------------------------------------------------------
-## Galleries
+10.2 Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+  margin: 1em 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+  max-width: 50%;
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+  max-width: 33.33%;
 }
 
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+  max-width: 25%;
 }
 
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+  max-width: 20%;
 }
 
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+  max-width: 16.66%;
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+  max-width: 14.28%;
 }
 
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+  max-width: 12.5%;
 }
 
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+  max-width: 11.11%;
 }
 
 .gallery-caption {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
 # _SsS
 --------------------------------------------------------------*/
 
+/* Reusable Styles */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.9375rem;
+}
+
+h4 {
+  font-size: 1.5625rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 div.div-line.blue {
   border-top: 1px solid #09F;
+}
+
+div.div-line.darkblue {
+  border-top: 1px solid #000DFF;
+}
+
+div.div-line.yellow {
+  border-top: 1px solid #FFBC00;
+}
+
+div.div-line.orange {
+  border-top: 1px solid #FF8E00;
 }
 
 a.btn.blue {
@@ -624,3 +676,115 @@ a.btn.blue {
 a.btn.blue:hover {
   background: #006DB3;
 }
+
+a.btn.darkblue {
+  border-bottom: 3px solid #010894;
+  background: #000DFF;
+}
+
+a.btn.darkblue:hover {
+  background: #000ABF;
+}
+
+a.btn.yellow {
+  border-bottom: 3px solid #D59D00;
+  background: #FFBC00;
+}
+
+a.btn.yellow:hover {
+  background: #FFC72A;
+}
+
+a.btn.orange {
+  border-bottom: 3px solid #D57700;
+  background: #FF8E00;
+}
+
+a.btn.orange:hover {
+  background: #FFA12A;
+}
+
+/* Widgets */
+
+h1.widget-title {
+  font-size: 1.9375rem;
+}
+
+/* Header */
+
+header#top-header div.row {
+
+}
+
+header#top-header div#top-header-branding {
+
+}
+
+header#top-header nav#top-header-nav {
+
+}
+
+/* Menu Styles */
+
+button.menu-toggle {
+  border: 1px solid #000;
+}
+
+nav#top-header-nav ul a {
+  color: #09F;
+}
+
+nav#top-header-nav ul li {
+  background: #CCC;
+}
+
+nav#top-header-nav ul > li > ul {
+  background: #CCC;
+}
+
+nav#top-header-nav ul > li > ul {
+  width: 175px;
+}
+
+nav#top-header-nav ul > li > ul > li {
+  width: 175px;
+}
+
+/* Home Page */
+
+/* Site Body */
+
+main.site-main {
+
+}
+
+/* Site Footer */
+
+footer#bottom-footer {
+
+}
+
+footer#bottom-footer div.row {
+
+}
+
+div#bottom-bar {
+
+}
+
+div#bottom-bar div.site-info {
+
+}
+
+div#bottom-bar div.site-info a {
+  color: #09F;
+}
+
+/*--------------------------------------------------------------
+# Responsive Design Media Queries
+--------------------------------------------------------------*/
+@media screen and (max-width: 39.9375em) {} /* Small only */
+@media screen and (min-width: 40em) {} /* Medium and up */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {} /* Medium only */
+@media screen and (min-width: 64em) {} /* Large and up */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {} /* Large only */
