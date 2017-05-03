@@ -277,6 +277,14 @@ nav#top-header-nav ul > li > ul > li:hover > ul {
     box-shadow: none;
   }
 
+  nav#top-header-nav ul.sub-menu {
+    width: 100%;
+  }
+
+  nav#top-header-nav ul.sub-menu > li {
+    width: 100%;
+  }
+
   nav#top-header-nav ul > li > ul li {
     text-align: center;
   }
