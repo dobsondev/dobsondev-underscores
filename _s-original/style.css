@@ -576,7 +576,9 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+  margin: 0.1em 0;
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
 /*--------------------------------------------------------------
