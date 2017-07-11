@@ -1,8 +1,11 @@
 <?php
-/*
-  Theme Name: _SsS
-  Template Name: Kitchen Sink
-*/
+/**
+ * Template Name: Kitchen Sink
+ * Theme Name: _SsS
+ *
+ * @package _sSs
+ */
+
 get_header(); ?>
 
   <div id="page-primary" class="site-primary">

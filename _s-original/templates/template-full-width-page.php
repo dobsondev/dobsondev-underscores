@@ -1,8 +1,12 @@
 <?php
-/*
-  Theme Name: _SsS
-  Template Name: Full Width Page
-*/
+/**
+ * Template Name: Full Width Page
+ * Theme Name: _SsS
+ *
+ * @package _sSs
+ */
+
+get_header(); ?>
 get_header(); ?>
 
   <div id="page-primary" class="site-primary">

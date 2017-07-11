@@ -1,8 +1,11 @@
 <?php
-/*
-  Theme Name: _SsS
-  Template Name: Home Page Sections
-*/
+/**
+ * Template Name: Home Page Sections
+ * Theme Name: _SsS
+ *
+ * @package _sSs
+ */
+
 get_header(); ?>
 
 <div id="home-page-primary" class="site-primary">

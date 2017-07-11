@@ -1,8 +1,11 @@
 <?php
-/*
-  Theme Name: _SsS
-  Template Name: Blank Page
-*/
+/**
+ * Template Name: Blank Page
+ * Theme Name: _SsS
+ *
+ * @package _sSs
+ */
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

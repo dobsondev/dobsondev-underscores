@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Conditions of Use
+ * Theme Name: _SsS
  *
  * @package _sSs
  */

@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Web Privacy Code
+ * Theme Name: _SsS
  *
  * @package _sSs
  */

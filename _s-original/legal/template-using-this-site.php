@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Using This Site
+ * Theme Name: _SsS
  *
  * @package _sSs
  */
