@@ -8,27 +8,31 @@
 get_header(); ?>
 
 	<div id="single-primary" class="site-primary">
-		<div class="row">
-			<main id="single-main" class="site-main small-12 large-8 columns" role="main">
+		<div class="grid-container">
+      <div class="grid-x grid-margin-x">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+				<main id="single-main" class="site-main small-12 large-8 columns" role="main">
 
-				<?php get_template_part( 'template-parts/content', 'single' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php the_post_navigation(); ?>
+					<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+					<?php the_post_navigation(); ?>
 
-			<?php endwhile; // end of the loop. ?>
+					<?php
+						// If comments are open or we have at least one comment, load up the comment template
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+					?>
 
-			</main><!-- #single-main -->
-			<?php get_sidebar(); ?>
-		</div><!-- .row -->
+				<?php endwhile; // end of the loop. ?>
+
+				</main><!-- #single-main -->
+				<?php get_sidebar(); ?>
+
+			</div><!-- .grid-x grid-margin-x -->
+    </div><!-- .grid-container -->
 	</div><!-- #single-primary -->
 
 <?php get_footer(); ?>

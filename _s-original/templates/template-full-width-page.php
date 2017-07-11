@@ -9,25 +9,29 @@
 get_header(); ?>
 get_header(); ?>
 
-  <div id="page-primary" class="site-primary">
-    <div class="row">
-      <main id="page-main" class="site-main small-12 columns" role="main">
+  <div id="full-width-page-primary" class="site-primary">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
 
-        <?php while ( have_posts() ) : the_post(); ?>
+        <main id="full-width-page-main" class="site-main small-12 cell" role="main">
 
-          <?php get_template_part( 'template-parts/content', 'page' ); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php
-            // If comments are open or we have at least one comment, load up the comment template
-            if ( comments_open() || get_comments_number() ) :
-              comments_template();
-            endif;
-          ?>
+            <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-        <?php endwhile; // end of the loop. ?>
+            <?php
+              // If comments are open or we have at least one comment, load up the comment template
+              if ( comments_open() || get_comments_number() ) :
+                comments_template();
+              endif;
+            ?>
 
-      </main><!-- #page-main -->
-    </div><!-- .row -->
-  </div><!-- #page-primary -->
+          <?php endwhile; // end of the loop. ?>
+
+        </main><!-- #full-width-page-main -->
+
+      </div><!-- .grid-x grid-margin-x -->
+    </div><!-- .grid-container -->
+  </div><!-- #full-width-page-primary -->
 
 <?php get_footer(); ?>

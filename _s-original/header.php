@@ -22,16 +22,20 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_sSs' ); ?></a>
 
 	<header id="top-header" class="site-header" role="banner">
-		<div class="row">
-			<div id="top-header-branding" class="site-branding small-12 large-6 columns">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			</div><!-- .site-branding -->
+		<div class="grid-container">
+			<div class="grid-x">
 
-			<nav id="top-header-nav" class="site-navigation small-12 large-6 columns" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_sSs' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
-		</div><!-- .row -->
+				<div id="top-header-branding" class="site-branding small-12 large-6 cell">
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				</div><!-- .site-branding -->
+
+				<nav id="top-header-nav" class="site-navigation small-12 large-6 cell" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_sSs' ); ?></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
+
+			</div><!-- .grid-x -->
+		</div><!-- .grid-container -->
 	</header><!-- #top-header -->
 
 	<div id="content">

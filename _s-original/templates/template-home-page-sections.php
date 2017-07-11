@@ -14,35 +14,43 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
     <div id="home-call-to-action" class="home-section">
-      <div class="row">
-        <div class="small-12 columns">
-          <!-- Content For this section goes here... -->
-        </div>
-      </div><!-- .row -->
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="small-12 cell">
+            <!-- Content For this section goes here... -->
+          </div>
+        </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-container -->
     </div><!-- #home-call-to-action -->
 
     <div id="home-staff" class="home-section">
-      <div class="row">
-        <div class="small-12 columns">
-          <!-- Content For this section goes here... -->
-        </div>
-      </div><!-- .row -->
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="small-12 cell">
+            <!-- Content For this section goes here... -->
+          </div>
+        </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-container -->
     </div><!-- #home-staff -->
 
     <div id="home-blog" class="home-section">
-      <div class="row">
-        <div class="small-12 columns">
-          <!-- Content For this section goes here... -->
-        </div>
-      </div><!-- .row -->
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="small-12 cell">
+            <!-- Content For this section goes here... -->
+          </div>
+        </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-container -->
     </div><!-- #home-blog -->
 
     <div id="home-contact" class="home-section">
-      <div class="row">
-        <div class="small-12 columns">
-          <!-- Content For this section goes here... -->
-        </div>
-      </div><!-- .row -->
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="small-12 cell">
+            <!-- Content For this section goes here... -->
+          </div>
+        </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-container -->
     </div><!-- #home-contact -->
 
   <?php endwhile; // end of the loop. ?>

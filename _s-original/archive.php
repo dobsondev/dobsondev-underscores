@@ -10,42 +10,46 @@
 get_header(); ?>
 
 	<div id="archive-primary" class="site-primary">
-		<div class="row">
-			<main id="archive-main" class="site-main small-12 large-8 columns" role="main">
+		<div class="grid-container">
+      <div class="grid-x grid-margin-x">
 
-			<?php if ( have_posts() ) : ?>
+				<main id="archive-main" class="site-main small-12 large-8 cell" role="main">
 
-				<header class="page-header">
-					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-					?>
-				</header><!-- .page-header -->
+				<?php if ( have_posts() ) : ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+					<header class="page-header">
+						<?php
+							the_archive_title( '<h1 class="page-title">', '</h1>' );
+							the_archive_description( '<div class="taxonomy-description">', '</div>' );
+						?>
+					</header><!-- .page-header -->
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_format() );
-					?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; ?>
+						<?php
+							/* Include the Post-Format-specific template for the content.
+							 * If you want to override this in a child theme, then include a file
+							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							 */
+							get_template_part( 'template-parts/content', get_post_format() );
+						?>
 
-				<?php the_posts_navigation(); ?>
+					<?php endwhile; ?>
 
-			<?php else : ?>
+					<?php the_posts_navigation(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php else : ?>
 
-			<?php endif; ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			</main><!-- #archive-main -->
-			<?php get_sidebar(); ?>
-		</div><!-- .row -->
+				<?php endif; ?>
+
+				</main><!-- #archive-main -->
+				<?php get_sidebar(); ?>
+
+			</div><!-- .grid-x grid-margin-x -->
+    </div><!-- .grid-container -->
 	</div><!-- #archive-primary -->
 
 <?php get_footer(); ?>

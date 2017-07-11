@@ -8,40 +8,44 @@
 get_header(); ?>
 
 	<div id="search-primary" class="site-primary">
-		<div class="row">
-			<main id="search-main" class="site-main small-12 large-8 columns" role="main">
+		<div class="grid-container">
+      <div class="grid-x grid-margin-x">
 
-			<?php if ( have_posts() ) : ?>
+				<main id="search-main" class="site-main small-12 large-8 columns" role="main">
 
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', '_sSs' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				</header><!-- .page-header -->
+				<?php if ( have_posts() ) : ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+					<header class="page-header">
+						<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', '_sSs' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					</header><!-- .page-header -->
 
-					<?php
-					/**
-					 * Run the loop for the search to output the results.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-search.php and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', 'search' );
-					?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; ?>
+						<?php
+						/**
+						 * Run the loop for the search to output the results.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-search.php and that will be used instead.
+						 */
+						get_template_part( 'template-parts/content', 'search' );
+						?>
 
-				<?php the_posts_navigation(); ?>
+					<?php endwhile; ?>
 
-			<?php else : ?>
+					<?php the_posts_navigation(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php else : ?>
 
-			<?php endif; ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			</main><!-- #search-main -->
-			<?php get_sidebar(); ?>
-		</div><!-- .row -->
+				<?php endif; ?>
+
+				</main><!-- #search-main -->
+				<?php get_sidebar(); ?>
+
+			</div><!-- .grid-x grid-margin-x -->
+    </div><!-- .grid-container -->
 	</div><!-- #search-primary -->
 
 <?php get_footer(); ?>

@@ -8,52 +8,56 @@
 get_header(); ?>
 
 	<div id="404-primary" class="site-primary">
-		<div class="row">
-			<main id="404-main" class="site-main small-12 large-8 columns" role="main">
+		<div class="grid-container">
+			<div class="grid-x grid-margin-x">
 
-				<section class="error-404 not-found">
-					<header class="page-header">
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_sSs' ); ?></h1>
-					</header><!-- .page-header -->
+				<main id="404-main" class="site-main small-12 large-8 cell" role="main">
 
-					<div class="page-content">
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_sSs' ); ?></p>
+					<section class="error-404 not-found">
+						<header class="page-header">
+							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_sSs' ); ?></h1>
+						</header><!-- .page-header -->
 
-						<?php get_search_form(); ?>
+						<div class="page-content">
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_sSs' ); ?></p>
 
-						<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+							<?php get_search_form(); ?>
 
-						<?php if ( _sSs_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-						<div class="widget widget_categories">
-							<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', '_sSs' ); ?></h2>
-							<ul>
+							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+
+							<?php if ( _sSs_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+							<div class="widget widget_categories">
+								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', '_sSs' ); ?></h2>
+								<ul>
+								<?php
+									wp_list_categories( array(
+										'orderby'    => 'count',
+										'order'      => 'DESC',
+										'show_count' => 1,
+										'title_li'   => '',
+										'number'     => 10,
+									) );
+								?>
+								</ul>
+							</div><!-- .widget -->
+							<?php endif; ?>
+
 							<?php
-								wp_list_categories( array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								) );
+								/* translators: %1$s: smiley */
+								$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', '_sSs' ), convert_smilies( ':)' ) ) . '</p>';
+								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 							?>
-							</ul>
-						</div><!-- .widget -->
-						<?php endif; ?>
 
-						<?php
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', '_sSs' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-						?>
+							<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
-						<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+						</div><!-- .page-content -->
+					</section><!-- .error-404 -->
 
-					</div><!-- .page-content -->
-				</section><!-- .error-404 -->
+				</main><!-- #404-main -->
+				<?php get_sidebar(); ?>
 
-			</main><!-- #404-main -->
-			<?php get_sidebar(); ?>
-		</div><!-- .row -->
+			</div><!-- .grid-x grid-margin-x -->
+    </div><!-- .grid-container -->
 	</div><!-- #404-primary -->
 
 <?php get_footer(); ?>

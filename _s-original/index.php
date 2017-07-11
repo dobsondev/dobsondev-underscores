@@ -14,35 +14,39 @@
 get_header(); ?>
 
 	<div id="index-primary" class="site-primary">
-		<div class="row">
-			<main id="index-main" class="site-main small-12 large-8 columns" role="main">
+		<div class="grid-container">
+      <div class="grid-x grid-margin-x">
 
-			<?php if ( have_posts() ) : ?>
+				<main id="index-main" class="site-main small-12 large-8 cell" role="main">
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php if ( have_posts() ) : ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_format() );
-					?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; ?>
+						<?php
+							/* Include the Post-Format-specific template for the content.
+							 * If you want to override this in a child theme, then include a file
+							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							 */
+							get_template_part( 'template-parts/content', get_post_format() );
+						?>
 
-				<?php the_posts_navigation(); ?>
+					<?php endwhile; ?>
 
-			<?php else : ?>
+					<?php the_posts_navigation(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php else : ?>
 
-			<?php endif; ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			</main><!-- #index-main -->
-			<?php get_sidebar(); ?>
-		</div><!-- .row -->
+				<?php endif; ?>
+
+				</main><!-- #index-main -->
+				<?php get_sidebar(); ?>
+
+			</div><!-- .grid-x grid-margin-x -->
+    </div><!-- .grid-container -->
 	</div><!-- #index-primary -->
 
 <?php get_footer(); ?>
