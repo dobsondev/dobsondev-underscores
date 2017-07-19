@@ -9,9 +9,9 @@ get_header(); ?>
 
 	<div id="search-primary" class="site-primary">
 		<div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-padding-x">
 
-				<main id="search-main" class="site-main small-12 large-8 columns" role="main">
+				<main id="search-main" class="site-main small-12 large-8 cell" role="main">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -44,7 +44,7 @@ get_header(); ?>
 				</main><!-- #search-main -->
 				<?php get_sidebar(); ?>
 
-			</div><!-- .grid-x grid-margin-x -->
+			</div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
 	</div><!-- #search-primary -->
 

@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<div id="index-primary" class="site-primary">
 		<div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-padding-x">
 
 				<main id="index-main" class="site-main small-12 large-8 cell" role="main">
 
@@ -45,7 +45,7 @@ get_header(); ?>
 				</main><!-- #index-main -->
 				<?php get_sidebar(); ?>
 
-			</div><!-- .grid-x grid-margin-x -->
+			</div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
 	</div><!-- #index-primary -->
 

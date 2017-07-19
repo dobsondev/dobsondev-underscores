@@ -23,7 +23,7 @@
 
 	<header id="top-header" class="site-header" role="banner">
 		<div class="grid-container">
-			<div class="grid-x">
+			<div class="grid-x grid-padding-x">
 
 				<div id="top-header-branding" class="site-branding small-12 large-6 cell">
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

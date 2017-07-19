@@ -10,7 +10,7 @@ get_header(); ?>
 
   <div id="conditions-of-use-primary" class="site-primary">
     <div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-padding-x">
 
         <main id="conditions-of-use-main" class="site-main small-12 large-8 cell" role="main">
 
@@ -127,7 +127,7 @@ get_header(); ?>
         </main><!-- #conditions-of-use-main -->
         <?php get_sidebar(); ?>
 
-      </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
   </div><!-- #conditions-of-use-primary -->
 

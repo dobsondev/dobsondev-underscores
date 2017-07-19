@@ -11,7 +11,7 @@ get_header(); ?>
 
   <div id="full-width-page-primary" class="site-primary">
     <div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-padding-x">
 
         <main id="full-width-page-main" class="site-main small-12 cell" role="main">
 
@@ -30,7 +30,7 @@ get_header(); ?>
 
         </main><!-- #full-width-page-main -->
 
-      </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
   </div><!-- #full-width-page-primary -->
 

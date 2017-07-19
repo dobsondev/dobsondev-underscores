@@ -9,9 +9,9 @@ get_header(); ?>
 
 	<div id="single-primary" class="site-primary">
 		<div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-padding-x">
 
-				<main id="single-main" class="site-main small-12 large-8 columns" role="main">
+				<main id="single-main" class="site-main small-12 large-8 cell" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 				</main><!-- #single-main -->
 				<?php get_sidebar(); ?>
 
-			</div><!-- .grid-x grid-margin-x -->
+			</div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
 	</div><!-- #single-primary -->
 

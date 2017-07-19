@@ -10,7 +10,7 @@ get_header(); ?>
 
   <div id="kitchen-sink-primary" class="site-primary">
     <div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-padding-x">
 
         <main id="kitchen-sink-main" class="site-main small-12 cell" role="main">
 
@@ -373,7 +373,7 @@ get_header(); ?>
 
         </main><!-- #kitchen-sink-main -->
 
-      </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
   </div><!-- #kitchen-sink-primary -->
 

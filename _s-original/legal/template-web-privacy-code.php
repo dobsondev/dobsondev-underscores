@@ -10,7 +10,7 @@ get_header(); ?>
 
   <div id="web-privacy-code-primary" class="site-primary">
     <div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-padding-x">
 
         <main id="web-privacy-code-main" class="site-main small-12 large-8 cell" role="main">
 
@@ -108,7 +108,7 @@ get_header(); ?>
         </main><!-- #web-privacy-code-main -->
         <?php get_sidebar(); ?>
 
-      </div><!-- .grid-x grid-margin-x -->
+      </div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
   </div><!-- #web-privacy-code-primary -->
 

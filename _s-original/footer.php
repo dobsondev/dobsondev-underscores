@@ -12,7 +12,7 @@
 
 	<footer id="bottom-footer" class="site-footer" role="contentinfo">
     <div class="grid-container">
-      <div class="footer-widgets grid-x">
+      <div class="footer-widgets grid-x grid-padding-x">
         <div class="bottom-footer-widget small-12 medium-6 large-3 cell" id="bottom-footer-widget-1">
           <?php dynamic_sidebar( 'footer-1' ); ?>
         </div>
@@ -31,13 +31,13 @@
 
   <div id="bottom-bar">
     <div class="grid-container">
-      <div class="grid-x">
+      <div class="grid-x grid-padding-x">
         <div class="site-info small-12 cell">
           &copy; Copyright <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> All Rights Reserved &nbsp;|&nbsp; Website Design &amp; Development by <a href="http://dobsondev.com/" title="DobsonDev | Web Development" target="_blank">DobsonDev</a>
           <br />
           Proudly Powered by <a href="http://wordpress.org/" title="WordPress" target="_blank">WordPress</a>
         </div><!-- .site-info -->
-      </div><!-- .grid-x -->
+      </div><!-- .grid-x grid-padding-x -->
     </div><!-- .grid-container -->
   </div><!-- #bottom-bar -->
 
