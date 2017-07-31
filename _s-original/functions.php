@@ -184,3 +184,19 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Outputs a 2D array as a CSV file.
+ *
+ * Remeber to include the following before you make the call to this function:
+ * header("Content-Type: text/csv");
+ * header("Content-Disposition: attachment; filename=file.csv");
+ *
+ * https://stackoverflow.com/questions/217424/create-a-csv-file-for-a-user-in-php#answer-6493794
+ */
+function outputCSV($data) {
+  $output = fopen("php://output", "w");
+  foreach ($data as $row)
+    fputcsv($output, $row); // here you can change delimiter/enclosure
+  fclose($output);
+}
