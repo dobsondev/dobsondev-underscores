@@ -481,6 +481,10 @@ h1.widget-title {
   display: block;
 }
 
+.post.sticky {
+  position: relative;
+}
+
 .hentry {
   margin: 0 0 1.5em;
 }
