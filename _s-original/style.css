@@ -726,7 +726,7 @@ h1.widget-title {
 
 /* Header */
 
-header#top-header div.row {
+header#top-header div.grid-container {
 
 }
 
@@ -778,7 +778,7 @@ footer#bottom-footer {
 
 }
 
-footer#bottom-footer div.row {
+footer#bottom-footer div.grid-container {
 
 }
 
