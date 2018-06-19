@@ -718,10 +718,14 @@ a.btn.orange:hover {
   background: #FFA12A;
 }
 
-/* Widgets */
+/* HTML */
 
-h1.widget-title {
-  font-size: 1.9375rem;
+html {
+
+}
+
+div#page {
+
 }
 
 /* Header */
@@ -770,6 +774,18 @@ nav#top-header-nav ul > li > ul > li {
 
 main.site-main {
 
+}
+
+/* Sidebar */
+
+div#sidebar {
+
+}
+
+/* Widgets */
+
+h1.widget-title {
+  font-size: 1.9375rem;
 }
 
 /* Site Footer */
