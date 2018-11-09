@@ -194,6 +194,11 @@ nav#top-header-nav ul > li > ul {
 
 nav#top-header-nav ul > li > ul > li {
   width: 175px; /* change value if you want a bigger/smaller menu */
+  word-wrap: break-word;
+}
+
+nav#top-header-nav ul > li > ul > li {
+  white-space: normal;
 }
 
 nav#top-header-nav ul > li:hover > ul {
