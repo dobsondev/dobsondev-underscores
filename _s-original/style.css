@@ -197,7 +197,7 @@ nav#top-header-nav ul > li > ul > li {
   word-wrap: break-word;
 }
 
-nav#top-header-nav ul > li > ul > li {
+nav#top-header-nav ul > li > ul > li a {
   white-space: normal;
 }
 
