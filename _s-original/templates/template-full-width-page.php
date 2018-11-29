@@ -7,7 +7,6 @@
  */
 
 get_header(); ?>
-get_header(); ?>
 
   <div id="full-width-page-primary" class="site-primary">
     <div class="grid-container">
