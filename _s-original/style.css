@@ -38,6 +38,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 10.0 Media
   10.1 Captions
   10.2 Galleries
+11.0 Numerical Pagination
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -642,6 +643,43 @@ object {
 }
 
 /*--------------------------------------------------------------
+11.0 Numerical Pagination
+--------------------------------------------------------------*/
+div.numeric-post-navigation {
+  text-align: center;
+  margin: 1.15em 0.85em;
+}
+
+div.numeric-post-navigation li a,
+div.numeric-post-navigation li a:hover,
+div.numeric-post-navigation li.active a,
+div.numeric-post-navigation li.disabled {
+  color: #FEFEFE;
+  text-decoration:none;
+}
+
+div.numeric-post-navigation li {
+  display: inline;
+}
+
+div.numeric-post-navigation li a,
+div.numeric-post-navigation li a:hover,
+div.numeric-post-navigation li.active a,
+div.numeric-post-navigation li.disabled {
+  background-color: #177ABA;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 12px;
+  padding: 0.75rem;
+}
+
+div.numeric-post-navigation li a:hover,
+div.numeric-post-navigation li.active a {
+  background-color: #076099;
+}
+
+
+/*--------------------------------------------------------------
 # _SsS
 --------------------------------------------------------------*/
 
@@ -791,6 +829,27 @@ div#sidebar {
 
 h1.widget-title {
   font-size: 1.9375rem;
+}
+
+/* Numeric Pagination */
+
+div.numeric-post-navigation li a,
+div.numeric-post-navigation li a:hover,
+div.numeric-post-navigation li.active a,
+div.numeric-post-navigation li.disabled {
+  color: #FEFEFE;
+}
+
+div.numeric-post-navigation li a,
+div.numeric-post-navigation li a:hover,
+div.numeric-post-navigation li.active a,
+div.numeric-post-navigation li.disabled {
+  background-color: #177ABA;
+}
+
+div.numeric-post-navigation li a:hover,
+div.numeric-post-navigation li.active a {
+  background-color: #076099;
 }
 
 /* Site Footer */
