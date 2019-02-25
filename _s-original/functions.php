@@ -161,6 +161,16 @@ function _sSs_scripts() {
 add_action( 'wp_enqueue_scripts', '_sSs_scripts' );
 
 /**
+ * Enqueue admin scripts and styles.
+ */
+function _sSs_admin_scripts() {
+	wp_enqueue_style( '_sSs-foundation-admin-style', get_template_directory_uri() . '/css/foundation/foundation-grid.min.css' );
+
+	wp_enqueue_style( '_sSs-admin-style', get_template_directory_uri() . '/style-admin.css' );
+}
+add_action( 'admin_enqueue_scripts', '_sSs_admin_scripts' );
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
