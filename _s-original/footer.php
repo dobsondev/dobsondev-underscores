@@ -33,7 +33,7 @@
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
         <div class="site-info small-12 cell">
-          &copy; Copyright <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> All Rights Reserved &nbsp;|&nbsp; Website Design &amp; Development by <a href="http://dobsondev.com/" title="DobsonDev | Web Development" target="_blank">DobsonDev</a>
+          &copy; Copyright <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> All Rights Reserved &nbsp;|&nbsp; Website Design &amp; Development by <a href="https://dobsondev.com/" title="DobsonDev | Web Development" target="_blank">DobsonDev</a>
           <br />
           Proudly Powered by <a href="http://wordpress.org/" title="WordPress" target="_blank">WordPress</a>
         </div><!-- .site-info -->
