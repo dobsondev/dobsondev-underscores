@@ -38,6 +38,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 10.0 Media
   10.1 Captions
   10.2 Galleries
+  10.3 Embedded Elements
 11.0 Numerical Pagination
 --------------------------------------------------------------*/
 
@@ -687,6 +688,28 @@ object {
   .gallery-columns-9 .gallery-item {
     max-width: 50%;
   }
+}
+
+/*--------------------------------------------------------------
+10.3 Emebedded Elements
+--------------------------------------------------------------*/
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*--------------------------------------------------------------

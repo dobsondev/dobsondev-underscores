@@ -196,6 +196,18 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ * Change default embed to have wrapper so we can style it properly. Style can be found
+ * in section 10.3 in style.css.
+ *
+ * https://wordpress.stackexchange.com/questions/134228/how-to-overwrite-youtube-embed
+ * https://developer.wordpress.org/reference/hooks/embed_oembed_html/
+ */
+function my_embed_oembed_html($html, $url, $attr, $post_id) {
+  return '<div class="embed-container">' . $html . '</div>';
+}
+add_filter( 'embed_oembed_html', 'my_embed_oembed_html', 99, 4 );
+
+/**
  * Outputs a 2D array as a CSV file.
  *
  * Remeber to include the following before you make the call to this function:
