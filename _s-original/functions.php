@@ -181,44 +181,11 @@ add_action( 'admin_enqueue_scripts', '_sSs_admin_scripts' );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Custom filters, actions and hooks used on the site.
  */
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/inc/extra-filters-actions-hooks.php';
 
 /**
- * Customizer additions.
+ * A collection of helpful functions that can be used on the site.
  */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Change default embed to have wrapper so we can style it properly. Style can be found
- * in section 10.3 in style.css.
- *
- * https://wordpress.stackexchange.com/questions/134228/how-to-overwrite-youtube-embed
- * https://developer.wordpress.org/reference/hooks/embed_oembed_html/
- */
-function my_embed_oembed_html($html, $url, $attr, $post_id) {
-  return '<div class="embed-container">' . $html . '</div>';
-}
-add_filter( 'embed_oembed_html', 'my_embed_oembed_html', 99, 4 );
-
-/**
- * Outputs a 2D array as a CSV file.
- *
- * Remeber to include the following before you make the call to this function:
- * header("Content-Type: text/csv");
- * header("Content-Disposition: attachment; filename=file.csv");
- *
- * https://stackoverflow.com/questions/217424/create-a-csv-file-for-a-user-in-php#answer-6493794
- */
-function outputCSV($data) {
-  $output = fopen("php://output", "w");
-  foreach ($data as $row)
-    fputcsv($output, $row); // here you can change delimiter/enclosure
-  fclose($output);
-}
+require get_template_directory() . '/inc/helpful-functions.php';
